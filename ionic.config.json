@@ -1,0 +1,7 @@
+{
+  "name": "fabric-wiz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
