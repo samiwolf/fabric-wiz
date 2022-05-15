@@ -1,17 +1,64 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      SL & COUNT
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+  <ion-item>
+    <ion-label>Fabric Type</ion-label>
+    <ion-select [(ngModel)]="currentFabricValue" (ionChange)="onFabricValueChange();" interface="popover">
+      <ion-select-option *ngFor="let value of fabricValues" [value]="value" >{{value}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>GSM</ion-label>
+    <ion-select [(ngModel)]="currentGsmValue" (ionChange)="onGsmValueChange();" interface="popover">
+      <ion-select-option *ngFor="let value of gsmValues" [value]="value" >{{value}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Color</ion-label>
+    <ion-select [(ngModel)]="currentColorValue" (ionChange)="onColorValueChange();" interface="popover">
+      <ion-select-option *ngFor="let value of colorValues" [value]="value" >{{value}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div class="button-secion">
+    <ion-button color="warning" expand="block" (click)="calculate()">Calculate</ion-button>
+  </div>
+
+  <div *ngIf="slResult!== '' && countResult!== ''" class="result-secion">
+    <ion-text color="S/L">
+      S/L :
+    </ion-text>
+    <ion-text color="dark">
+     {{slResult}}
+    </ion-text>
+    <br>
+    <br>
+    <ion-text color="success">
+      Count :
+    </ion-text>
+    <ion-text color="dark">
+      {{countResult}}
+    </ion-text>
+  </div>
+
+<!--  <div *ngIf="slResult === '' || countResult === ''" class="result-secion">-->
+<!--    <ion-text color="S/L">-->
+<!--      No result found-->
+<!--    </ion-text>-->
+<!--  </div>-->
+
+
+
+<!--  <app-explore-container name="Tab 1 page"></app-explore-container>-->
 </ion-content>
