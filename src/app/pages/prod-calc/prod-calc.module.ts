@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { ProdCalcPageRoutingModule } from './prod-calc-routing.module';
-import {ExploreContainerComponentModule} from '../../explore-container/explore-container.module';
 import { ProdCalcPage } from './prod-calc.page';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { ProdCalcPage } from './prod-calc.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ExploreContainerComponentModule,
     ProdCalcPageRoutingModule
   ],
   declarations: [ProdCalcPage]

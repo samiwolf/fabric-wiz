@@ -1,32 +1,11 @@
 import { Injectable } from '@angular/core';
+import {gsmJSON} from "../data/gsmdata";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CountSLserviceService {
-  gsmJSON = [
-    {
-      "gsm": 100,
-      "fabric": "s/j",
-      "color": "white",
-      "count": "44/1",
-      "sl": 2.4
-    },
-    {
-      "gsm": 110,
-      "fabric": "s/j",
-      "color": "white",
-      "count": "40/1",
-      "sl": 2.55
-    },
-    {
-      "gsm": 120,
-      "fabric": "s/j",
-      "color": "black",
-      "count": "40/1",
-      "sl": 2.45
-    }
-  ];
+  gsmJSON = gsmJSON;
 
   gsmDict = new Map();
   constructor() {
