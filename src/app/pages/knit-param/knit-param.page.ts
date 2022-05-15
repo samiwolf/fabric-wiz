@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import {CountSLserviceService} from "../services/count-slservice.service";
+import { Component, OnInit } from '@angular/core';
+import {CountSLserviceService} from "../../services/count-slservice.service";
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-knit-param',
+  templateUrl: './knit-param.page.html',
+  styleUrls: ['./knit-param.page.scss'],
 })
-export class Tab1Page {
+export class KnitParamPage implements OnInit {
+
   gsmValues = ['100', '110', '120', '130', '140', '150', '160'];
   fabricValues = ['S/J', 'type 2', 'type 3', 'type 4', 'type 5', 'type 6'];
   colorValues = ['White', 'Black'];
@@ -47,4 +48,8 @@ export class Tab1Page {
     }
 
   }
+
+  ngOnInit(): void {
+  }
+
 }

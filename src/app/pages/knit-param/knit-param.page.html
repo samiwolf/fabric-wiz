@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>
       SL & COUNT
     </ion-title>
@@ -40,7 +43,7 @@
       S/L :
     </ion-text>
     <ion-text color="dark">
-     {{slResult}}
+      {{slResult}}
     </ion-text>
     <br>
     <br>
@@ -52,13 +55,13 @@
     </ion-text>
   </div>
 
-<!--  <div *ngIf="slResult === '' || countResult === ''" class="result-secion">-->
-<!--    <ion-text color="S/L">-->
-<!--      No result found-->
-<!--    </ion-text>-->
-<!--  </div>-->
+  <!--  <div *ngIf="slResult === '' || countResult === ''" class="result-secion">-->
+  <!--    <ion-text color="S/L">-->
+  <!--      No result found-->
+  <!--    </ion-text>-->
+  <!--  </div>-->
 
 
 
-<!--  <app-explore-container name="Tab 1 page"></app-explore-container>-->
+  <!--  <app-explore-container name="Tab 1 page"></app-explore-container>-->
 </ion-content>

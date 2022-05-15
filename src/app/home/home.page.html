@@ -1,9 +1,37 @@
-<ion-header>
+<!--<ion-tabs>-->
+
+<!--  <ion-tab-bar slot="bottom">-->
+<!--    <ion-tab-button tab="knit-param">-->
+<!--      <ion-icon name="triangle"></ion-icon>-->
+<!--      <ion-label>Tab 1</ion-label>-->
+<!--    </ion-tab-button>-->
+
+<!--    <ion-tab-button tab="tab2">-->
+<!--      <ion-icon name="ellipse"></ion-icon>-->
+<!--      <ion-label>Tab 2</ion-label>-->
+<!--    </ion-tab-button>-->
+
+<!--    &lt;!&ndash;    <ion-tab-button tab="tab3">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <ion-icon name="square"></ion-icon>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <ion-label>Tab 3</ion-label>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </ion-tab-button>&ndash;&gt;-->
+<!--  </ion-tab-bar>-->
+
+<!--</ion-tabs>-->
+<ion-header collapse="fade">
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>Header</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+  <ion-button expand="block" fill="outline" router-direction="forward" href="/knit-param">Knitting Parameter</ion-button>
+  <br>
+  <ion-button expand="block" fill="outline" router-direction="forward" href="/prod-calc">Production Calculation</ion-button>
+  <br>
+  <ion-button expand="block" fill="outline">Yarn and Lycna Consumption</ion-button>
+  <br>
+  <ion-button expand="block" fill="outline">Quality 4-point System</ion-button>
+  <br>
+  <ion-button expand="block" fill="outline">Knitting Design</ion-button>
 
 </ion-content>

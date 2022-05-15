@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Production Calculation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="fixed">Count</ion-label>
+    <ion-input [(ngModel)]="count"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Fabric</ion-label>
+    <ion-input [(ngModel)]="fabric"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Machine Dia.</ion-label>
+    <ion-input [(ngModel)]="machine"></ion-input>
+  </ion-item>
+
+  <div class="button-secion">
+    <ion-button color="warning" expand="block" (click)="calculate()">Calculate</ion-button>
+  </div>
+
+  <div *ngIf="prodResult!== ''" class="result-secion">
+    <ion-text color="dark">
+      Production/hr : {{prodResult}}
+    </ion-text>
+  </div>
+</ion-content>
