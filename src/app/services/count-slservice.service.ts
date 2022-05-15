@@ -16,13 +16,13 @@ export class CountSLserviceService {
   {
     for (let index in this.gsmJSON)
     {
-      // console.log(this.gsmJSON[index]);
+      console.log(this.gsmJSON[index]);
       this.gsmDict.set(
         JSON.stringify(
         {
           gsm: this.gsmJSON[index].gsm.toString(),
           fabric: this.gsmJSON[index].fabric,
-          color: this.gsmJSON[index].color
+          color: this.gsmJSON[index].color.toLowerCase()
         }),
         {
           count: this.gsmJSON[index].count,
@@ -34,6 +34,12 @@ export class CountSLserviceService {
 
   public getCountSL(gsm, fabric, color)
   {
+    console.log(JSON.stringify(
+      {
+        gsm: gsm.toLowerCase(),
+        fabric: fabric.toLowerCase(),
+        color: color.toLowerCase()
+      }));
     return this.gsmDict.get(JSON.stringify(
       {
         gsm: gsm.toLowerCase(),
