@@ -20,13 +20,13 @@ export class CountSLserviceService {
       this.gsmDict.set(
         JSON.stringify(
         {
-          gsm: this.gsmJSON[index].gsm.toString(),
-          fabric: this.gsmJSON[index].fabric,
+          gsm: this.gsmJSON[index].gsm.toString().toLowerCase(),
+          fabric: this.gsmJSON[index].fabric.toLowerCase(),
           color: this.gsmJSON[index].color.toLowerCase()
         }),
         {
           count: this.gsmJSON[index].count,
-          sl: this.gsmJSON[index].sl.toString()
+          sl: this.gsmJSON[index].sl.toString().toLowerCase()
         }
       )
     }

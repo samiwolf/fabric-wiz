@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "fabric-wiz",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

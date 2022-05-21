@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CountSLserviceService} from "../../services/count-slservice.service";
+import {GsmValuesService} from "../../services/gsm-values.service";
 
 @Component({
   selector: 'app-knit-param',
@@ -8,11 +9,15 @@ import {CountSLserviceService} from "../../services/count-slservice.service";
 })
 export class KnitParamPage implements OnInit {
 
-  gsmValues = ['100', '110', '120', '130', '140', '150', '160'];
-  fabricValues = ['S/J', 'type 2', 'type 3', 'type 4', 'type 5', 'type 6'];
+
+
+
+
+  gsmValues = [];
+  fabricValues = ['S/J', 'Ly s/j', '1x1 Rib', '1x1 H.F', '1x1 F.F', '2x1 Rib', '2x1 H.F', '2x1 F.F', 'CTN B/FLEECE', 'POLY B/FLEECE', '2T TERRY'];
   colorValues = ['White', 'Black'];
   // values
-  currentGsmValue = '100';
+  currentGsmValue = '';
   currentFabricValue = 'S/J';
   currentColorValue = 'White';
 
@@ -21,14 +26,19 @@ export class KnitParamPage implements OnInit {
   countResult = '';
   slResult = '';
   constructor(
-    private countSLService: CountSLserviceService
-  ) {}
+    private countSLService: CountSLserviceService,
+    private gsmService: GsmValuesService
+  ) {
+    this.gsmValues = this.gsmService.getGSMValue('S/J');
+  }
 
   onGsmValueChange() {
     console.log(this.currentGsmValue);
   }
   onFabricValueChange() {
     console.log(this.currentFabricValue);
+    this.currentGsmValue = '';
+    this.gsmValues = this.gsmService.getGSMValue(this.currentFabricValue);
   }
   onColorValueChange() {
     console.log(this.currentColorValue);
