@@ -1,0 +1,56 @@
+<ion-item>
+  <ion-label>Machine Dia.</ion-label>
+  <ion-select [(ngModel)]="dia" interface="popover">
+    <ion-select-option *ngFor="let value of diaValues" [value]="value" >{{value}}</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Machine Dia.</ion-label>
+  <ion-select [(ngModel)]="gauge" interface="popover">
+    <ion-select-option *ngFor="let value of gaugeValues" [value]="value" >{{value}}</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">K Count</ion-label>
+  <ion-input [(ngModel)]="kcount"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="fixed">T Count</ion-label>
+  <ion-input [(ngModel)]="tcount"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="fixed">L Count</ion-label>
+  <ion-input [(ngModel)]="lcount"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">K SL</ion-label>
+  <ion-input [(ngModel)]="ksl"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="fixed">T SL</ion-label>
+  <ion-input [(ngModel)]="tsl"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="fixed">L SL</ion-label>
+  <ion-input [(ngModel)]="lsl"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">RPM</ion-label>
+  <ion-input [(ngModel)]="rpm"></ion-input>
+</ion-item>
+
+
+
+<div class="button-secion">
+  <ion-button color="warning" expand="block" (click)="calculate()">Calculate</ion-button>
+</div>
+
+<div *ngIf="prodResult!== ''" class="result-secion">
+  <ion-text color="dark">
+    Production/day : {{prodResult | number : '1.2-2'}} KG
+  </ion-text>
+</div>

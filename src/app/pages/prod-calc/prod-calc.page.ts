@@ -6,18 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prod-calc.page.scss'],
 })
 export class ProdCalcPage implements OnInit {
-  count = '5';
-  fabric = '6';
-  machine = '4978';
-  prodResult = '';
 
+  fabricValues = ['S/J','CTN FLEECE', 'POLY FLEECE', 'RIB'];
+  currentFabricValue = 'S/J';
   constructor() { }
 
   ngOnInit() {
   }
 
-  calculate() {
-    console.log('abcd');
-    this.prodResult = 'abcd';
+
+
+  onFabricValueChange() {
+    console.log(this.currentFabricValue);
   }
 }
