@@ -1,3 +1,44 @@
-<p>
-  normal-rib-calc works!
-</p>
+
+<ion-item>
+  <ion-label>A x B </ion-label>
+  <ion-select [(ngModel)]="axb" (ionChange)="axbChange();" interface="popover">
+    <ion-select-option *ngFor="let value of axbValues" [value]="value" >{{value}}</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">Machine Dia.</ion-label>
+  <ion-input [(ngModel)]="dia"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">Gauge</ion-label>
+  <ion-input [(ngModel)]="gauge"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">Count</ion-label>
+  <ion-input [(ngModel)]="count"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">S/L</ion-label>
+  <ion-input [(ngModel)]="sl"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">RPM</ion-label>
+  <ion-input [(ngModel)]="rpm"></ion-input>
+</ion-item>
+
+
+
+<div class="button-secion">
+  <ion-button color="warning" expand="block" (click)="calculate()">Calculate</ion-button>
+</div>
+
+<div *ngIf="prodResult!== ''" class="result-secion">
+  <ion-text color="dark">
+    Production/day : {{prodResult | number : '1.2-2'}} KG
+  </ion-text>
+</div>

@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sj-calc.component.scss'],
 })
 export class SjCalcComponent implements OnInit {
-  count = 0;
-  sl = 0;
-  rpm = 0;
-  dia = 0;
-  gauge = 0;
-  prodResult = 0;
+  count: number;
+  sl: number;
+  rpm: number;
+  dia: number;
+  gauge: number;
+  prodResult: number;
   constructor() { }
 
   ngOnInit() {}
