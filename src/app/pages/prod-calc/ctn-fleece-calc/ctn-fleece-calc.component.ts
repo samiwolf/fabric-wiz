@@ -6,18 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ctn-fleece-calc.component.scss'],
 })
 export class CtnFleeceCalcComponent implements OnInit {
-  rpm : number;
+  rpm: number;
   dia = 28;
   gauge = 16;
   prodResult = 0;
   diaValues = [28, 30, 32, 34, 36, 38];
   gaugeValues = [16, 18, 20];
-  kcount : number;
-  tcount : number;
-  lcount : number;
-  ksl : number;
-  tsl : number;
-  lsl : number;
+  kcount: number;
+  tcount: number;
+  lcount: number;
+  ksl: number;
+  tsl: number;
+  lsl: number;
   constructor() { }
 
   ngOnInit() {}
